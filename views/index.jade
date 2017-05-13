@@ -1,0 +1,49 @@
+doctype html
+html
+	head
+		title Inscriptions
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+		link(type="text/css" rel="stylesheet", href="../node_modules/materialize-css/dist/css/materialize.min.css",  media="screen,projection")
+		
+		link(href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+
+
+	body.container.blue-grey.lighten-5
+
+		header
+			
+
+		main.row
+			h4.center Compétences
+
+			div.row
+				form#form.col.s12(action="/contact", method="post")
+					div.row
+						div.input-field.col.s12.center
+							label.black-text(for="firstname",  data-error="wrong", data-success="right") Nom
+							input#firstname.validate(type="text", placeholder="Dupond" name="firstname")
+
+					div.row
+						div.input-field.col.s12.center
+							label.black-text(for="name") Prénom
+							input#name(type="text", placeholder="Rémi" name="name")
+
+					div.row
+						div.input-field.col.s12 Date de naissance
+							label(for="birthdate")
+							input#birthdate.datepicker.grey-text.text-lighten-1(type="date" name="birthdate")
+
+					div.row
+						div.input-field.col.s12
+							label.black-text(for="adress") Adresse
+							textarea#adress.materialize-textarea(type="text", placeholder="10, rue du jambon 44560 Louin" name="adress")
+
+					button#submit.waves-effect.waves-light.btn.right(type="submit") Suivant
+				
+
+
+		footer
+	script(type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js")
+	script(type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js")
